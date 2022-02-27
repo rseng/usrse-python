@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>usrse package &mdash; US-RSE Python 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-argparse.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Internal API" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> US-RSE Python
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/user-guide.html">User Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usrse.html">US-RSE Python Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Internal API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">usrse package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-usrse.client">usrse.client module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-usrse.logger">usrse.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-usrse.main">usrse.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-usrse.main.client">usrse.main.client module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-usrse.main.endpoints">usrse.main.endpoints module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-usrse.utils">usrse.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-usrse.utils.fileio">usrse.utils.fileio module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-usrse.utils.terminal">usrse.utils.terminal module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">US-RSE Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Internal API</a> &raquo;</li>
+      <li>usrse package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api_reference/internal/usrse.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="usrse-package">
+<h1>usrse package<a class="headerlink" href="#usrse-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-usrse.client">
+<span id="usrse-client-module"></span><h2>usrse.client module<a class="headerlink" href="#module-usrse.client" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.client.get_parser">
+<code class="sig-prename descclassname"><span class="pre">usrse.client.</span></code><code class="sig-name descname"><span class="pre">get_parser</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/client.html#get_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.client.get_parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.client.run">
+<code class="sig-prename descclassname"><span class="pre">usrse.client.</span></code><code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/client.html#run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.client.run" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-usrse.logger">
+<span id="usrse-logger-module"></span><h2>usrse.logger module<a class="headerlink" href="#module-usrse.logger" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.logger.</span></code><code class="sig-name descname"><span class="pre">ColorizingStreamHandler</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">nocolor=False</span></span></em>, <em><span class="n"><span class="pre">stream=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stderr&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;</span></span></em>, <em><span class="n"><span class="pre">use_threads=False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#ColorizingStreamHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.StreamHandler</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.BLACK">
+<code class="sig-name descname"><span class="pre">BLACK</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.BLACK" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.BLUE">
+<code class="sig-name descname"><span class="pre">BLUE</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.BLUE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.BOLD_SEQ">
+<code class="sig-name descname"><span class="pre">BOLD_SEQ</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[1m'</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.BOLD_SEQ" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.COLOR_SEQ">
+<code class="sig-name descname"><span class="pre">COLOR_SEQ</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[%dm'</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.COLOR_SEQ" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.CYAN">
+<code class="sig-name descname"><span class="pre">CYAN</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.CYAN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.GREEN">
+<code class="sig-name descname"><span class="pre">GREEN</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.GREEN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.MAGENTA">
+<code class="sig-name descname"><span class="pre">MAGENTA</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.MAGENTA" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.RED">
+<code class="sig-name descname"><span class="pre">RED</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.RED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.RESET_SEQ">
+<code class="sig-name descname"><span class="pre">RESET_SEQ</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[0m'</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.RESET_SEQ" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.WHITE">
+<code class="sig-name descname"><span class="pre">WHITE</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.WHITE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.YELLOW">
+<code class="sig-name descname"><span class="pre">YELLOW</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.YELLOW" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.can_color_tty">
+<code class="sig-name descname"><span class="pre">can_color_tty</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#ColorizingStreamHandler.can_color_tty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.can_color_tty" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.colors">
+<code class="sig-name descname"><span class="pre">colors</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'CRITICAL':</span> <span class="pre">1,</span> <span class="pre">'DEBUG':</span> <span class="pre">4,</span> <span class="pre">'ERROR':</span> <span class="pre">1,</span> <span class="pre">'INFO':</span> <span class="pre">2,</span> <span class="pre">'WARNING':</span> <span class="pre">3}</span></em><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.colors" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.decorate">
+<code class="sig-name descname"><span class="pre">decorate</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#ColorizingStreamHandler.decorate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.decorate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.emit">
+<code class="sig-name descname"><span class="pre">emit</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#ColorizingStreamHandler.emit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.emit" title="Permalink to this definition"></a></dt>
+<dd><p>Emit a record.</p>
+<p>If a formatter is specified, it is used to format the record.
+The record is then written to the stream with a trailing newline.  If
+exception information is present, it is formatted using
+traceback.print_exception and appended to the stream.  If the stream
+has an ‘encoding’ attribute, it is used to determine how to do the
+output to the stream.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="usrse.logger.ColorizingStreamHandler.is_tty">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">is_tty</span></code><a class="headerlink" href="#usrse.logger.ColorizingStreamHandler.is_tty" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.logger.Logger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.logger.</span></code><code class="sig-name descname"><span class="pre">Logger</span></code><a class="reference internal" href="../../_modules/usrse/logger.html#Logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.cleanup">
+<code class="sig-name descname"><span class="pre">cleanup</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.cleanup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.cleanup" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.debug">
+<code class="sig-name descname"><span class="pre">debug</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.debug"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.error">
+<code class="sig-name descname"><span class="pre">error</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.exit">
+<code class="sig-name descname"><span class="pre">exit</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em>, <em><span class="n"><span class="pre">return_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.exit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.exit" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.handler">
+<code class="sig-name descname"><span class="pre">handler</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.handler" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.info">
+<code class="sig-name descname"><span class="pre">info</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.location">
+<code class="sig-name descname"><span class="pre">location</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.location" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.progress">
+<code class="sig-name descname"><span class="pre">progress</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">done</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">total</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.progress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.progress" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.set_level">
+<code class="sig-name descname"><span class="pre">set_level</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.set_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.set_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.set_stream_handler">
+<code class="sig-name descname"><span class="pre">set_stream_handler</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">stream_handler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.set_stream_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.set_stream_handler" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.shellcmd">
+<code class="sig-name descname"><span class="pre">shellcmd</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.shellcmd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.shellcmd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.text_handler">
+<code class="sig-name descname"><span class="pre">text_handler</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.text_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.text_handler" title="Permalink to this definition"></a></dt>
+<dd><p>The default snakemake log handler.
+Prints the output to the console.
+:param msg: the log message dictionary
+:type msg: dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.logger.Logger.warning">
+<code class="sig-name descname"><span class="pre">warning</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#Logger.warning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.Logger.warning" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.logger.setup_logger">
+<code class="sig-prename descclassname"><span class="pre">usrse.logger.</span></code><code class="sig-name descname"><span class="pre">setup_logger</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">printshellcmds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">nocolor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">use_threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">wms_monitor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/logger.html#setup_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.logger.setup_logger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-usrse.main">
+<span id="usrse-main-module"></span><h2>usrse.main module<a class="headerlink" href="#module-usrse.main" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-usrse.main.client">
+<span id="usrse-main-client-module"></span><h2>usrse.main.client module<a class="headerlink" href="#module-usrse.main.client" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.client.Client">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.client.</span></code><code class="sig-name descname"><span class="pre">Client</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">baseurl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Client"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Client" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Interact with US-RSE endpoints.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Client.get">
+<code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Client.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Client.get" title="Permalink to this definition"></a></dt>
+<dd><p>Get a US-RSE named endpoint</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.client.Result">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.client.</span></code><code class="sig-name descname"><span class="pre">Result</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">data</span></span></em>, <em><span class="n"><span class="pre">endpoint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A result holds the request result and can parse or return in different formats.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.available_width">
+<code class="sig-name descname"><span class="pre">available_width</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">columns</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.available_width"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.available_width" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate available width based on fields we cannot truncate (urls)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="usrse.main.client.Result.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">color</span></code><a class="headerlink" href="#usrse.main.client.Result.color" title="Permalink to this definition"></a></dt>
+<dd><p>Return a random color</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.ensure_complete">
+<code class="sig-name descname"><span class="pre">ensure_complete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.ensure_complete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.ensure_complete" title="Permalink to this definition"></a></dt>
+<dd><p>If any data missing fields, ensure they are included</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.print_json">
+<code class="sig-name descname"><span class="pre">print_json</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.print_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.print_json" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.save">
+<code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save to output file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.table">
+<code class="sig-name descname"><span class="pre">table</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.table" title="Permalink to this definition"></a></dt>
+<dd><p>Pretty print a table of US-RSE content!)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.table_columns">
+<code class="sig-name descname"><span class="pre">table_columns</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.table_columns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.table_columns" title="Permalink to this definition"></a></dt>
+<dd><p>Shared function to return consistent table columns</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.table_live">
+<code class="sig-name descname"><span class="pre">table_live</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em>, <em><span class="n"><span class="pre">pause</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.04</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.table_live"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.table_live" title="Permalink to this definition"></a></dt>
+<dd><p>A super cool animated table!!</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.table_rows">
+<code class="sig-name descname"><span class="pre">table_rows</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">columns</span></span></em>, <em><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.table_rows"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.table_rows" title="Permalink to this definition"></a></dt>
+<dd><p>Shared function to yield rows as a list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.client.Result.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/client.html#Result.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.client.Result.to_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-usrse.main.endpoints">
+<span id="usrse-main-endpoints-module"></span><h2>usrse.main.endpoints module<a class="headerlink" href="#module-usrse.main.endpoints" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Dei">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">Dei</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">baseurl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#Dei"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.Dei" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#usrse.main.endpoints.Endpoint" title="usrse.main.endpoints.Endpoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.Endpoint</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Dei.emoji">
+<code class="sig-name descname"><span class="pre">emoji</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sparkles'</span></em><a class="headerlink" href="#usrse.main.endpoints.Dei.emoji" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Dei.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'dei'</span></em><a class="headerlink" href="#usrse.main.endpoints.Dei.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Dei.path">
+<code class="sig-name descname"><span class="pre">path</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/api/dei.json'</span></em><a class="headerlink" href="#usrse.main.endpoints.Dei.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Dei.skips">
+<code class="sig-name descname"><span class="pre">skips</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['repeated',</span> <span class="pre">'published',</span> <span class="pre">'description']</span></em><a class="headerlink" href="#usrse.main.endpoints.Dei.skips" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">Endpoint</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">baseurl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#Endpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.Endpoint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint.dont_truncate">
+<code class="sig-name descname"><span class="pre">dont_truncate</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['url']</span></em><a class="headerlink" href="#usrse.main.endpoints.Endpoint.dont_truncate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint.emoji">
+<code class="sig-name descname"><span class="pre">emoji</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'calendar'</span></em><a class="headerlink" href="#usrse.main.endpoints.Endpoint.emoji" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint.skip_list">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">skip_list</span></code><a class="headerlink" href="#usrse.main.endpoints.Endpoint.skip_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint.title">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">title</span></code><a class="headerlink" href="#usrse.main.endpoints.Endpoint.title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint.truncate_list">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">truncate_list</span></code><a class="headerlink" href="#usrse.main.endpoints.Endpoint.truncate_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint.url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">url</span></code><a class="headerlink" href="#usrse.main.endpoints.Endpoint.url" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Events">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">Events</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">baseurl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#Events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.Events" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#usrse.main.endpoints.Endpoint" title="usrse.main.endpoints.Endpoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.Endpoint</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Events.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'events'</span></em><a class="headerlink" href="#usrse.main.endpoints.Events.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Events.path">
+<code class="sig-name descname"><span class="pre">path</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/api/events.json'</span></em><a class="headerlink" href="#usrse.main.endpoints.Events.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Events.skips">
+<code class="sig-name descname"><span class="pre">skips</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['repeated',</span> <span class="pre">'published',</span> <span class="pre">'description']</span></em><a class="headerlink" href="#usrse.main.endpoints.Events.skips" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Newsletters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">Newsletters</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">baseurl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#Newsletters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.Newsletters" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#usrse.main.endpoints.Endpoint" title="usrse.main.endpoints.Endpoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.Endpoint</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Newsletters.emoji">
+<code class="sig-name descname"><span class="pre">emoji</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'newspaper'</span></em><a class="headerlink" href="#usrse.main.endpoints.Newsletters.emoji" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Newsletters.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'newsletters'</span></em><a class="headerlink" href="#usrse.main.endpoints.Newsletters.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Newsletters.path">
+<code class="sig-name descname"><span class="pre">path</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/api/newsletters.json'</span></em><a class="headerlink" href="#usrse.main.endpoints.Newsletters.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Newsletters.skips">
+<code class="sig-name descname"><span class="pre">skips</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['published']</span></em><a class="headerlink" href="#usrse.main.endpoints.Newsletters.skips" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Posts">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">Posts</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">baseurl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#Posts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.Posts" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#usrse.main.endpoints.Endpoint" title="usrse.main.endpoints.Endpoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.Endpoint</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Posts.emoji">
+<code class="sig-name descname"><span class="pre">emoji</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pencil'</span></em><a class="headerlink" href="#usrse.main.endpoints.Posts.emoji" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Posts.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'posts'</span></em><a class="headerlink" href="#usrse.main.endpoints.Posts.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Posts.path">
+<code class="sig-name descname"><span class="pre">path</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/api/posts.json'</span></em><a class="headerlink" href="#usrse.main.endpoints.Posts.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Posts.skips">
+<code class="sig-name descname"><span class="pre">skips</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['published']</span></em><a class="headerlink" href="#usrse.main.endpoints.Posts.skips" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.endpoint">
+<code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">endpoint</span></code><a class="headerlink" href="#usrse.main.endpoints.endpoint" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#usrse.main.endpoints.Events" title="usrse.main.endpoints.Events"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.Events</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-usrse.utils">
+<span id="usrse-utils-module"></span><h2>usrse.utils module<a class="headerlink" href="#module-usrse.utils" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-usrse.utils.fileio">
+<span id="usrse-utils-fileio-module"></span><h2>usrse.utils.fileio module<a class="headerlink" href="#module-usrse.utils.fileio" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.fileio.print_json">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">print_json</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">json_obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/fileio.html#print_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.fileio.print_json" title="Permalink to this definition"></a></dt>
+<dd><p>Print json pretty</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.fileio.read_file">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">read_file</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'r'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/fileio.html#read_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.fileio.read_file" title="Permalink to this definition"></a></dt>
+<dd><p>Read a file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.fileio.read_json">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">read_json</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'r'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/fileio.html#read_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.fileio.read_json" title="Permalink to this definition"></a></dt>
+<dd><p>Read a json file to a dictionary.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.fileio.write_file">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">write_file</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">content</span></span></em>, <em><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w'</span></span></em>, <em><span class="n"><span class="pre">exec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/fileio.html#write_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.fileio.write_file" title="Permalink to this definition"></a></dt>
+<dd><p>Write content to a filename</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.fileio.write_json">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">write_json</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">json_obj</span></span></em>, <em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/fileio.html#write_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.fileio.write_json" title="Permalink to this definition"></a></dt>
+<dd><p>Write json to a filename</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-usrse.utils.terminal">
+<span id="usrse-utils-terminal-module"></span><h2>usrse.utils.terminal module<a class="headerlink" href="#module-usrse.utils.terminal" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.terminal.confirm_action">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">confirm_action</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">question</span></span></em>, <em><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/terminal.html#confirm_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.terminal.confirm_action" title="Permalink to this definition"></a></dt>
+<dd><p>confirm if the user wants to perform a certain action</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>question</strong> (<em>the question that will be asked</em>) – </li>
+<li><strong>force</strong> (<em>if the user wants to skip the prompt</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.terminal.confirm_uninstall">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">confirm_uninstall</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/terminal.html#confirm_uninstall"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.terminal.confirm_uninstall" title="Permalink to this definition"></a></dt>
+<dd><p>confirm if the user wants to uninstall a module</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<em>the file that will be removed</em>) – </li>
+<li><strong>force</strong> (<em>if the user wants to skip the prompt</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.terminal.get_installdir">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">get_installdir</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/terminal.html#get_installdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.terminal.get_installdir" title="Permalink to this definition"></a></dt>
+<dd><p>get_installdir returns the installation directory of the application</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usrse.utils.terminal.run_command">
+<code class="sig-prename descclassname"><span class="pre">usrse.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">run_command</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">cmd</span></span></em>, <em><span class="n"><span class="pre">sudo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/utils/terminal.html#run_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.utils.terminal.run_command" title="Permalink to this definition"></a></dt>
+<dd><p>run_command uses subprocess to send a command to the terminal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cmd</strong> (<em>the command to send</em><em>, </em><em>should be a list for subprocess</em>) – </li>
+<li><strong>error_message</strong> (<em>the error message to give to user if fails</em><em>,</em>) – </li>
+<li><strong>failed.</strong> (<em>if none specified</em><em>, </em><em>will alert that command</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Internal API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Vanessa Sochat.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

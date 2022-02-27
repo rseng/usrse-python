@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Guide &mdash; US-RSE Python 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx-argparse.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="US-RSE Python Module" href="../api_reference/usrse.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> US-RSE Python
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#get">Get</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#changing-the-baseurl">Changing the baseurl</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#shell">Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#container">Container</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference/usrse.html">US-RSE Python Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference/internal/modules.html">Internal API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">US-RSE Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Getting Started</a> &raquo;</li>
+      <li>User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/getting_started/user-guide.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="user-guide">
+<span id="getting-started-user-guide"></span><h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline"></a></h1>
+<p>US-RSE Python is a library in Python to make it easy to retrieve data from the US-RSE
+site, which is available via our <a class="reference external" href="https://us-rse.org/wg/website/#feeds">static apis</a>.
+With US-RSE Python we can:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Quickly see updated content (newsletters, posts, dei or other events) in the terminal</li>
+<li>Pipe or save a json of the same data to file</li>
+</ul>
+</div></blockquote>
+<p>And then enable automation that is external to our main site that requires it!
+We are excited about what tools we can build around this, and please
+<a class="reference external" href="https://github.com/US-RSE/usrse-python">give us a ping</a>. if you have an idea!</p>
+<script id="asciicast-472034" src="https://asciinema.org/a/472034.js" data-speed="2" async></script><div class="section" id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline"></a></h2>
+<p>Once you have usrse installed, you likely quickly want to get data</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts
+<span class="gp">$ </span>usrse get newsletters
+<span class="gp">$ </span>usrse get dei
+<span class="gp">$ </span>usrse get events
+</pre></div>
+</div>
+<p>Or snazz things up a bit!</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts --live
+<span class="gp">$ </span>usrse get newsletters --live
+<span class="gp">$ </span>usrse get dei --live
+<span class="gp">$ </span>usrse get events --live
+</pre></div>
+</div>
+<p>Or output as json or save to json for later.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get dei --json
+<span class="gp">$ </span>usrse get events --outfile events.json
+</pre></div>
+</div>
+<p>You can then easily install, load, and use modules:</p>
+</div>
+<div class="section" id="commands">
+<span id="getting-started-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline"></a></h2>
+<p>The following commands are available!</p>
+<div class="section" id="get">
+<span id="getting-started-commands-get"></span><h3>Get<a class="headerlink" href="#get" title="Permalink to this headline"></a></h3>
+<p>The most basic functionality is to get content. Here are all the types we can ask for:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: usrse get [-h] [--json] [--all] [--live] [--limit LIMIT] [--outfile OUTFILE] content_type</span>
+
+<span class="go">get USRSE content</span>
+
+<span class="go">positional arguments:</span>
+<span class="go">  content_type          content type</span>
+<span class="go">                        events</span>
+<span class="go">                        posts</span>
+<span class="go">                        dei</span>
+<span class="go">                        newsletters</span>
+
+<span class="go">optional arguments:</span>
+<span class="go">  -h, --help            show this help message and exit</span>
+<span class="go">  --json                output json</span>
+<span class="go">  --all                 output json</span>
+<span class="go">  --live, -k            get a live and interactive table!</span>
+<span class="go">  --limit LIMIT         limit of posts to show (defaults to show, use --all for all posts)</span>
+<span class="go">  --outfile OUTFILE, -o OUTFILE</span>
+<span class="go">                        write content to output file</span>
+</pre></div>
+</div>
+<p>And an example for how to ask:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts
+</pre></div>
+</div>
+<p>By default, we set of a limit of 25 for the 25 most recent results. If you want to change the limit:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts --limit <span class="m">10</span>
+</pre></div>
+</div>
+<p>Or ask for them all!</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts --all
+</pre></div>
+</div>
+<p>Output json instead of a table (json does not set limits):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts --json
+</pre></div>
+</div>
+<p>or save json to file:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts --outfile posts.json
+</pre></div>
+</div>
+<p>Here are all the content types you can ask for:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts
+<span class="gp">$ </span>usrse get newsletters
+<span class="gp">$ </span>usrse get dei
+<span class="gp">$ </span>usrse get events
+</pre></div>
+</div>
+<p>Want to have some fun? Try the live tables!</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse get posts --live
+<span class="gp">$ </span>usrse get newsletters --live
+<span class="gp">$ </span>usrse get dei --live
+<span class="gp">$ </span>usrse get events --live
+</pre></div>
+</div>
+<div class="section" id="changing-the-baseurl">
+<h4>Changing the baseurl<a class="headerlink" href="#changing-the-baseurl" title="Permalink to this headline"></a></h4>
+<p>You can also use a baseurl for local development, e.g., let’s say we do:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git clone https://github.com/USRSE/usrse.github.io
+<span class="gp">$ </span><span class="nb">cd</span> usrse.github.io
+<span class="gp">$ </span>bundle <span class="nb">exec</span> jekyll serve
+</pre></div>
+</div>
+<p>And then in another terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse --baseurl http://127.0.0.1:4000 get posts
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="shell">
+<span id="getting-started-commands-shell"></span><h3>Shell<a class="headerlink" href="#shell" title="Permalink to this headline"></a></h3>
+<p>If you are a developer and want to create a quick client to test or interact with,
+we are looking out for you!  For example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse shell
+<span class="go">Python 3.8.8 (default, Apr 13 2021, 19:58:26)</span>
+<span class="go">Type &#39;copyright&#39;, &#39;credits&#39; or &#39;license&#39; for more information</span>
+<span class="go">IPython 7.29.0 -- An enhanced Interactive Python. Type &#39;?&#39; for help.</span>
+
+<span class="go">In [1]: client</span>
+<span class="go">Out[1]: [usrse-client]</span>
+
+<span class="go">In [2]: result = client.get(&quot;newsletters&quot;)</span>
+<span class="go">GET https://us-rse.org/api/newsletters.json</span>
+<span class="go">In [3]: result.to_dict()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="container">
+<h2>Container<a class="headerlink" href="#container" title="Permalink to this headline"></a></h2>
+<p>If you need to build a quick container, we provide a Dockerfile in the repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">docker build -t usrse-python .</span>
+</pre></div>
+</div>
+<p>This library is under development and we will have more endpoints and functionality
+coming soon!</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../api_reference/usrse.html" class="btn btn-neutral float-right" title="US-RSE Python Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Vanessa Sochat.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
