@@ -1,0 +1,62 @@
+name: Build Deploy Containers
+
+on:
+
+  schedule:
+    - cron: 0 3 * * *
+
+  # Publish packages on release
+  release:
+    types: [published] 
+
+  pull_request: []
+
+  # On push to main we build and deploy images
+  push: 
+    branches:
+      - main
+ 
+jobs:
+  build:
+    permissions:
+      packages: write
+
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set Organization Name
+        if: (github.event_name != 'schedule')
+        env:
+          org: ${{ github.event.repository.owner.login }}
+        run: echo "org=${org}" >> ${GITHUB_ENV}
+
+      - name: Set Organization Name
+        if: (github.event_name == 'schedule')
+        run: echo "org=dyninst" >> ${GITHUB_ENV}
+
+      - name: Build Container
+        run: |
+           docker build -t ghcr.io/USRSE/usrse-python:latest .
+
+      - name: GHCR Login
+        if: (github.event_name != 'pull_request')
+        uses: docker/login-action@v1 
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag and Push Release Image
+        if: (github.event_name == 'release')
+        run: |
+            tag=${GITHUB_REF#refs/tags/}
+            echo "Tagging and releasing ghcr.io/${org}/usrse-python:${tag}"
+            docker tag ghcr.io/${org}/usrse-python:latest ghcr.io/${org}/usrse-python:${tag}
+            docker push ghcr.io/${org}/usrse-python:${tag}
+
+      - name: Deploy
+        if: (github.event_name != 'pull_request')
+        run: docker push ghcr.io/${org}/usrse-python:latest
