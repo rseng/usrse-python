@@ -3,7 +3,7 @@
 Welcome to US-RSE Python! This is a handy little client and assocated actions to make it easy
 to retrieve updated content from our various feeds.
 
-[![GitHub actions status](https://github.com/USRSE/usrse-python/workflows/usrse-python/badge.svg?branch=main)](https://github.com/USRSE/usrse-python/actions?query=branch%3Amain+workflow%3Ausrse-python)
+[![usrse-python](https://github.com/USRSE/usrse-python/actions/workflows/main.yml/badge.svg)](https://github.com/USRSE/usrse-python/actions/workflows/main.yml)
 
 [![asciicast](https://asciinema.org/a/472034.svg)](https://asciinema.org/a/472034?speed=2)
 
