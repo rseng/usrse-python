@@ -52,6 +52,18 @@ class Dei(Endpoint):
     emoji = "sparkles"
 
 
+class Jobs(Endpoint):
+    name = "jobs"
+    path = "/api/jobs.json"
+    emoji = "briefcase"
+
+
+class MemberCounts(Endpoint):
+    name = "member-counts"
+    path = "/api/member-counts.json"
+    emoji = "1234"
+
+
 class Newsletters(Endpoint):
     name = "newsletters"
     path = "/api/newsletters.json"
@@ -72,6 +84,8 @@ class Events(Endpoint):
     skips = ["repeated", "published", "description"]
 
 
-for endpoint in [Dei, Newsletters, Posts, Events]:
+for endpoint in [Dei, Newsletters, Posts, Events, Jobs, MemberCounts]:
     register_names.append(endpoint.name)
     register[endpoint.name] = endpoint
+
+register_names.sort()

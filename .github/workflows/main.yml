@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Setup black linter
-        run: conda create --quiet --name black pyflakes
+        run: conda create --quiet --name black pyflakes pytest
 
       - name: Check Spelling
         uses: crate-ci/typos@592b36d23c62cb378f6097a292bc902ee73f93ef # version 1.0.4
@@ -37,3 +37,12 @@ jobs:
           pyflakes usrse/*.py
           pyflakes usrse/utils/fileio.py
           pyflakes usrse/utils/terminal.py
+          
+      - name: Run Tests
+        run: |
+          export PATH="/usr/share/miniconda/bin:$PATH"
+          source activate black
+          pip install -e .
+          cd usrse/tests
+          /bin/bash test_client.sh
+          pytest -xsv test_*.py
