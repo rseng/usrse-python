@@ -39,7 +39,6 @@ echo "#### Testing get "
 runTest 0 $output usrse get --help
 for endpoint in $(usrse list); do
     runTest 0 $output usrse get $endpoint
-    runTest 0 $output usrse get $endpoint --live
 done   
 
 rm -rf ${tmpdir}
