@@ -42,7 +42,10 @@ class Result:
         Calculate available width based on fields we cannot truncate (urls)
         """
         # We will determine column width based on terminal size
-        width = os.get_terminal_size().columns
+        try:
+            width = os.get_terminal_size().columns
+        except OSError:
+            width = 120
 
         # Calculate column width
         column_width = int(width / len(columns))
