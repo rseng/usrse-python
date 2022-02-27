@@ -16,6 +16,20 @@ See our ⭐️ [Documentation](https://us-rse.org/usrse-python/) to get started!
  - nightly test run to ensure US-RSE static API functioning as expected
  - endpoints for jobs and then functions here
 
+## Contributors
+
+We use the [all-contributors](https://github.com/all-contributors/all-contributors) 
+tool to generate a contributors graphic below.
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## License
 
 This code is licensed under the MPL 2.0 [LICENSE](LICENSE).
