@@ -61,7 +61,7 @@ def get_parser():
     subparsers.add_parser("version", description="show software version")
 
     # List endpoints available
-    listing = subparsers.add_parser("list", description="list endpoints available")
+    subparsers.add_parser("list", description="list endpoints available")
 
     # Local shell with client loaded
     shell = subparsers.add_parser(
