@@ -8,7 +8,6 @@
 
 import os
 import json
-import shutil
 import pytest
 import usrse.utils as utils
 

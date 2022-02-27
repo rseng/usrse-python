@@ -35,6 +35,7 @@ jobs:
           pyflakes usrse/main/*py
           pyflakes usrse/client
           pyflakes usrse/*.py
+          pyflakes usrse/*.py
           pyflakes usrse/utils/fileio.py
           pyflakes usrse/utils/terminal.py
           

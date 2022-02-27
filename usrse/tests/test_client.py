@@ -1,17 +1,14 @@
 #!/usr/bin/python
 
-# Copyright (C) 2021 Vanessa Sochat.
+# Copyright (C) 2022 Vanessa Sochat.
 
 # This Source Code Form is subject to the terms of the
 # Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed
 # with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import pytest
-import shutil
 import os
-import io
 
-import usrse.utils as utils
 import usrse.endpoints as endpoints
 from usrse.main import Client
 
