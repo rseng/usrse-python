@@ -9,7 +9,7 @@
 import pytest
 import os
 
-import usrse.endpoints as endpoints
+import usrse.main.endpoints as endpoints
 from usrse.main import Client
 
 here = os.path.dirname(os.path.abspath(__file__))
