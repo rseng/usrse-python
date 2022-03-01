@@ -56,7 +56,7 @@ def test_get_installdir():
     print("Testing utils.get_installdir")
     whereami = utils.get_installdir()
     print(whereami)
-    assert whereami.endswith("shpc")
+    assert whereami.endswith("usrse")
 
 
 def test_run_command():
