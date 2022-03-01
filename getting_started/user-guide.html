@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>User Guide &mdash; US-RSE Python 0.0.1 documentation</title>
+  <title>User Guide &mdash; US-RSE Python 0.0.11 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/sphinx-argparse.css" type="text/css" />
@@ -31,7 +31,7 @@
             <a href="../index.html" class="icon icon-home"> US-RSE Python
           </a>
               <div class="version">
-                0.0.1
+                0.0.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -47,6 +47,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#list">List</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#get">Get</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#changing-the-baseurl">Changing the baseurl</a></li>
 </ul>
@@ -110,6 +111,8 @@ We are excited about what tools we can build around this, and please
 <span class="gp">$ </span>usrse get newsletters
 <span class="gp">$ </span>usrse get dei
 <span class="gp">$ </span>usrse get events
+<span class="gp">$ </span>usrse get member-counts
+<span class="gp">$ </span>usrse get <span class="nb">jobs</span>
 </pre></div>
 </div>
 <p>Or snazz things up a bit!</p>
@@ -117,6 +120,8 @@ We are excited about what tools we can build around this, and please
 <span class="gp">$ </span>usrse get newsletters --live
 <span class="gp">$ </span>usrse get dei --live
 <span class="gp">$ </span>usrse get events --live
+<span class="gp">$ </span>usrse get member-counts --live
+<span class="gp">$ </span>usrse get <span class="nb">jobs</span> --live
 </pre></div>
 </div>
 <p>Or output as json or save to json for later.</p>
@@ -129,6 +134,28 @@ We are excited about what tools we can build around this, and please
 <div class="section" id="commands">
 <span id="getting-started-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline"></a></h2>
 <p>The following commands are available!</p>
+<div class="section" id="list">
+<span id="getting-started-commands-list"></span><h3>List<a class="headerlink" href="#list" title="Permalink to this headline"></a></h3>
+<p>The first thing you might want to do is see what endpoints are available.
+You can do that with <code class="docutils literal notranslate"><span class="pre">list</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>usrse list
+<span class="go">dei</span>
+<span class="go">events</span>
+<span class="go">jobs</span>
+<span class="go">member-counts</span>
+<span class="go">newsletters</span>
+<span class="go">posts</span>
+</pre></div>
+</div>
+<p>This is also nice to pipe into a bash loop for doing something:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">for endpoint in $(usrse list); do</span>
+<span class="gp">   # </span><span class="k">do</span> something here
+<span class="go">   echo $endpoint;</span>
+<span class="go">done</span>
+</pre></div>
+</div>
+<p>Once you know endpoints, then you can <code class="docutils literal notranslate"><span class="pre">get</span></code> them, discussed next.</p>
+</div>
 <div class="section" id="get">
 <span id="getting-started-commands-get"></span><h3>Get<a class="headerlink" href="#get" title="Permalink to this headline"></a></h3>
 <p>The most basic functionality is to get content. Here are all the types we can ask for:</p>
@@ -142,6 +169,8 @@ We are excited about what tools we can build around this, and please
 <span class="go">                        posts</span>
 <span class="go">                        dei</span>
 <span class="go">                        newsletters</span>
+<span class="go">                        member-counts</span>
+<span class="go">                        jobs</span>
 
 <span class="go">optional arguments:</span>
 <span class="go">  -h, --help            show this help message and exit</span>
@@ -178,6 +207,8 @@ We are excited about what tools we can build around this, and please
 <span class="gp">$ </span>usrse get newsletters
 <span class="gp">$ </span>usrse get dei
 <span class="gp">$ </span>usrse get events
+<span class="gp">$ </span>usrse get member-counts
+<span class="gp">$ </span>usrse get <span class="nb">jobs</span>
 </pre></div>
 </div>
 <p>Want to have some fun? Try the live tables!</p>
@@ -185,6 +216,8 @@ We are excited about what tools we can build around this, and please
 <span class="gp">$ </span>usrse get newsletters --live
 <span class="gp">$ </span>usrse get dei --live
 <span class="gp">$ </span>usrse get events --live
+<span class="gp">$ </span>usrse get member-counts --live
+<span class="gp">$ </span>usrse get <span class="nb">jobs</span> --live
 </pre></div>
 </div>
 <div class="section" id="changing-the-baseurl">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>usrse package &mdash; US-RSE Python 0.0.1 documentation</title>
+  <title>usrse package &mdash; US-RSE Python 0.0.11 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/sphinx-argparse.css" type="text/css" />
@@ -30,7 +30,7 @@
             <a href="../../index.html" class="icon icon-home"> US-RSE Python
           </a>
               <div class="version">
-                0.0.1
+                0.0.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -410,6 +410,11 @@ Prints the output to the console.
 <code class="sig-name descname"><span class="pre">emoji</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'calendar'</span></em><a class="headerlink" href="#usrse.main.endpoints.Endpoint.emoji" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint.order">
+<code class="sig-name descname"><span class="pre">order</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#Endpoint.order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.Endpoint.order" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="usrse.main.endpoints.Endpoint.skip_list">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">skip_list</span></code><a class="headerlink" href="#usrse.main.endpoints.Endpoint.skip_list" title="Permalink to this definition"></a></dt>
@@ -449,6 +454,54 @@ Prints the output to the console.
 <dl class="py attribute">
 <dt class="sig sig-object py" id="usrse.main.endpoints.Events.skips">
 <code class="sig-name descname"><span class="pre">skips</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['repeated',</span> <span class="pre">'published',</span> <span class="pre">'description']</span></em><a class="headerlink" href="#usrse.main.endpoints.Events.skips" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Jobs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">Jobs</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">baseurl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#Jobs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.Jobs" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#usrse.main.endpoints.Endpoint" title="usrse.main.endpoints.Endpoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.Endpoint</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Jobs.emoji">
+<code class="sig-name descname"><span class="pre">emoji</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'briefcase'</span></em><a class="headerlink" href="#usrse.main.endpoints.Jobs.emoji" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Jobs.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'jobs'</span></em><a class="headerlink" href="#usrse.main.endpoints.Jobs.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.Jobs.path">
+<code class="sig-name descname"><span class="pre">path</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/api/jobs.json'</span></em><a class="headerlink" href="#usrse.main.endpoints.Jobs.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usrse.main.endpoints.MemberCounts">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">MemberCounts</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">baseurl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#MemberCounts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.MemberCounts" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#usrse.main.endpoints.Endpoint" title="usrse.main.endpoints.Endpoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.Endpoint</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.MemberCounts.emoji">
+<code class="sig-name descname"><span class="pre">emoji</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1234'</span></em><a class="headerlink" href="#usrse.main.endpoints.MemberCounts.emoji" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.MemberCounts.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'member-counts'</span></em><a class="headerlink" href="#usrse.main.endpoints.MemberCounts.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="usrse.main.endpoints.MemberCounts.order">
+<code class="sig-name descname"><span class="pre">order</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/usrse/main/endpoints.html#MemberCounts.order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usrse.main.endpoints.MemberCounts.order" title="Permalink to this definition"></a></dt>
+<dd><p>Sort by month and year</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usrse.main.endpoints.MemberCounts.path">
+<code class="sig-name descname"><span class="pre">path</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/api/member-counts.json'</span></em><a class="headerlink" href="#usrse.main.endpoints.MemberCounts.path" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -508,7 +561,7 @@ Prints the output to the console.
 <dl class="py attribute">
 <dt class="sig sig-object py" id="usrse.main.endpoints.endpoint">
 <code class="sig-prename descclassname"><span class="pre">usrse.main.endpoints.</span></code><code class="sig-name descname"><span class="pre">endpoint</span></code><a class="headerlink" href="#usrse.main.endpoints.endpoint" title="Permalink to this definition"></a></dt>
-<dd><p>alias of <a class="reference internal" href="#usrse.main.endpoints.Events" title="usrse.main.endpoints.Events"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.Events</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#usrse.main.endpoints.MemberCounts" title="usrse.main.endpoints.MemberCounts"><code class="xref py py-class docutils literal notranslate"><span class="pre">usrse.main.endpoints.MemberCounts</span></code></a></p>
 </dd></dl>
 
 </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>usrse.main.client &mdash; US-RSE Python 0.0.1 documentation</title>
+  <title>usrse.main.client &mdash; US-RSE Python 0.0.11 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/sphinx-argparse.css" type="text/css" />
@@ -29,7 +29,7 @@
             <a href="../../../index.html" class="icon icon-home"> US-RSE Python
           </a>
               <div class="version">
-                0.0.1
+                0.0.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -104,8 +104,11 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="ow">or</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">endpoint</span> <span class="o">=</span> <span class="n">endpoint</span>
+
+        <span class="c1"># Does the endpoint want to sort or otherwise order?</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">endpoint</span><span class="o">.</span><span class="n">order</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
         <span class="c1"># Keep track of the max length for each field not truncated</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_widths</span> <span class="o">=</span> <span class="p">{}</span>
@@ -119,7 +122,10 @@
 <span class="sd">        Calculate available width based on fields we cannot truncate (urls)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># We will determine column width based on terminal size</span>
-        <span class="n">width</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">get_terminal_size</span><span class="p">()</span><span class="o">.</span><span class="n">columns</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">get_terminal_size</span><span class="p">()</span><span class="o">.</span><span class="n">columns</span>
+        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="mi">120</span>
 
         <span class="c1"># Calculate column width</span>
         <span class="n">column_width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">width</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">))</span>
@@ -347,6 +353,7 @@
         <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">endpoint</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;Issue retrieving </span><span class="si">%s</span><span class="s2">:</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">endpoint</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">txt</span><span class="p">))</span>
+
         <span class="k">return</span> <span class="n">Result</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">endpoint</span><span class="p">)</span></div></div>
 </pre></div>
 

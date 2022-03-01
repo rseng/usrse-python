@@ -28,10 +28,12 @@ Once you have usrse installed, you likely quickly want to get data
 
 .. code-block:: console
 
-   $ usrse get posts
-   $ usrse get newsletters
-   $ usrse get dei
-   $ usrse get events
+    $ usrse get posts
+    $ usrse get newsletters
+    $ usrse get dei
+    $ usrse get events
+    $ usrse get member-counts
+    $ usrse get jobs
 
 Or snazz things up a bit!
 
@@ -41,6 +43,8 @@ Or snazz things up a bit!
     $ usrse get newsletters --live
     $ usrse get dei --live
     $ usrse get events --live
+    $ usrse get member-counts --live
+    $ usrse get jobs --live
 
 Or output as json or save to json for later.
 
@@ -59,6 +63,36 @@ Commands
 ========
 
 The following commands are available! 
+
+.. _getting_started-commands-list:
+
+List
+----
+
+The first thing you might want to do is see what endpoints are available.
+You can do that with ``list``:
+
+.. code-block:: console
+
+    $ usrse list
+    dei
+    events
+    jobs
+    member-counts
+    newsletters
+    posts
+
+
+This is also nice to pipe into a bash loop for doing something:
+
+.. code-block:: console
+
+    for endpoint in $(usrse list); do
+       # do something here
+       echo $endpoint;
+    done
+
+Once you know endpoints, then you can ``get`` them, discussed next.
 
 .. _getting_started-commands-get:
 
@@ -79,6 +113,8 @@ The most basic functionality is to get content. Here are all the types we can as
                             posts
                             dei
                             newsletters
+                            member-counts
+                            jobs
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -133,6 +169,8 @@ Here are all the content types you can ask for:
     $ usrse get newsletters
     $ usrse get dei
     $ usrse get events
+    $ usrse get member-counts
+    $ usrse get jobs
 
 Want to have some fun? Try the live tables!
 
@@ -143,6 +181,8 @@ Want to have some fun? Try the live tables!
     $ usrse get newsletters --live
     $ usrse get dei --live
     $ usrse get events --live
+    $ usrse get member-counts --live
+    $ usrse get jobs --live
 
 
 Changing the baseurl

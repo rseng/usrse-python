@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>usrse.main.endpoints &mdash; US-RSE Python 0.0.1 documentation</title>
+  <title>usrse.main.endpoints &mdash; US-RSE Python 0.0.11 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/sphinx-argparse.css" type="text/css" />
@@ -29,7 +29,7 @@
             <a href="../../../index.html" class="icon icon-home"> US-RSE Python
           </a>
               <div class="version">
-                0.0.1
+                0.0.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -80,6 +80,7 @@
 <span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;MPL 2.0&quot;</span>
 
 <span class="kn">import</span> <span class="nn">usrse.defaults</span> <span class="k">as</span> <span class="nn">defaults</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="c1"># Registered endpoints (populated on init)</span>
@@ -98,6 +99,10 @@
                 <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span>
                     <span class="s2">&quot;Misconfigured endpoint </span><span class="si">%s</span><span class="s2"> missing </span><span class="si">%s</span><span class="s2"> attribute&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
                 <span class="p">)</span>
+
+    <span class="c1"># If needed, make sure endpoint data is sorted</span>
+<div class="viewcode-block" id="Endpoint.order"><a class="viewcode-back" href="../../../api_reference/internal/usrse.html#usrse.main.endpoints.Endpoint.order">[docs]</a>    <span class="k">def</span> <span class="nf">order</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">data</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -129,6 +134,28 @@
     <span class="n">emoji</span> <span class="o">=</span> <span class="s2">&quot;sparkles&quot;</span></div>
 
 
+<div class="viewcode-block" id="Jobs"><a class="viewcode-back" href="../../../api_reference/internal/usrse.html#usrse.main.endpoints.Jobs">[docs]</a><span class="k">class</span> <span class="nc">Jobs</span><span class="p">(</span><span class="n">Endpoint</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;jobs&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/api/jobs.json&quot;</span>
+    <span class="n">emoji</span> <span class="o">=</span> <span class="s2">&quot;briefcase&quot;</span></div>
+
+
+<div class="viewcode-block" id="MemberCounts"><a class="viewcode-back" href="../../../api_reference/internal/usrse.html#usrse.main.endpoints.MemberCounts">[docs]</a><span class="k">class</span> <span class="nc">MemberCounts</span><span class="p">(</span><span class="n">Endpoint</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;member-counts&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/api/member-counts.json&quot;</span>
+    <span class="n">emoji</span> <span class="o">=</span> <span class="s2">&quot;1234&quot;</span>
+
+<div class="viewcode-block" id="MemberCounts.order"><a class="viewcode-back" href="../../../api_reference/internal/usrse.html#usrse.main.endpoints.MemberCounts.order">[docs]</a>    <span class="k">def</span> <span class="nf">order</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sort by month and year</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span>
+            <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">entry</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="s2">&quot;%B %Y&quot;</span><span class="p">),</span>
+            <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span></div></div>
+
+
 <div class="viewcode-block" id="Newsletters"><a class="viewcode-back" href="../../../api_reference/internal/usrse.html#usrse.main.endpoints.Newsletters">[docs]</a><span class="k">class</span> <span class="nc">Newsletters</span><span class="p">(</span><span class="n">Endpoint</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;newsletters&quot;</span>
     <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/api/newsletters.json&quot;</span>
@@ -149,9 +176,11 @@
     <span class="n">skips</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;repeated&quot;</span><span class="p">,</span> <span class="s2">&quot;published&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">]</span></div>
 
 
-<span class="k">for</span> <span class="n">endpoint</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Dei</span><span class="p">,</span> <span class="n">Newsletters</span><span class="p">,</span> <span class="n">Posts</span><span class="p">,</span> <span class="n">Events</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">endpoint</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Dei</span><span class="p">,</span> <span class="n">Newsletters</span><span class="p">,</span> <span class="n">Posts</span><span class="p">,</span> <span class="n">Events</span><span class="p">,</span> <span class="n">Jobs</span><span class="p">,</span> <span class="n">MemberCounts</span><span class="p">]:</span>
     <span class="n">register_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">endpoint</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
     <span class="n">register</span><span class="p">[</span><span class="n">endpoint</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">endpoint</span>
+
+<span class="n">register_names</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 </pre></div>
 
            </div>
