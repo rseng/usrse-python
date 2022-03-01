@@ -27,8 +27,11 @@ class Result:
     """
 
     def __init__(self, data, endpoint):
-        self.data = data or {}
         self.endpoint = endpoint
+
+        # Does the endpoint want to sort or otherwise order?
+        data = data or {}
+        self.data = self.endpoint.order(data)
 
         # Keep track of the max length for each field not truncated
         self.max_widths = {}
@@ -273,4 +276,5 @@ class Client:
         result = requests.get(endpoint.url)
         if result.status_code != 200:
             sys.exit("Issue retrieving %s:\n%s" % (endpoint.url, result.txt))
+
         return Result(result.json(), endpoint)
