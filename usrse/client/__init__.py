@@ -5,6 +5,7 @@ __copyright__ = "Copyright 2022, Vanessa Sochat"
 __license__ = "MPL 2.0"
 
 import usrse
+import usrse.main.endpoints as endpoints
 from usrse.logger import setup_logger
 import argparse
 import sys
@@ -59,6 +60,9 @@ def get_parser():
     # print version and exit
     subparsers.add_parser("version", description="show software version")
 
+    # List endpoints available
+    subparsers.add_parser("list", description="list endpoints available")
+
     # Local shell with client loaded
     shell = subparsers.add_parser(
         "shell",
@@ -82,7 +86,7 @@ def get_parser():
     )
     get.add_argument(
         "content_type",
-        help="content type\nevents\nposts\ndei\nnewsletters",
+        help="content type\n%s" % "\n".join(endpoints.register_names),
     )
     get.add_argument("--json", help="output json", default=False, action="store_true")
     get.add_argument("--all", help="output json", default=False, action="store_true")
@@ -151,6 +155,8 @@ def run():
         from .get import main
     elif args.command == "shell":
         from .shell import main
+    elif args.command == "list":
+        from .listing import main
 
     # Pass on to the correct parser
     return_code = 0

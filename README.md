@@ -11,10 +11,9 @@ See our ⭐️ [Documentation](https://us-rse.org/usrse-python/) to get started!
 
 ## Coming Soon / TODO
 
- - full tests for all endpoints
  - automated deployment to pypi on release
  - nightly test run to ensure US-RSE static API functioning as expected
- - endpoints for jobs and then functions here
+ - other endpoints and functions here
 
 ## Contributors
 

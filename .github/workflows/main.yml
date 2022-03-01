@@ -11,8 +11,7 @@ jobs:
   formatting:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-
+      - uses: actions/checkout@v2
       - name: Setup black linter
         run: conda create --quiet --name black pyflakes
 
@@ -37,3 +36,20 @@ jobs:
           pyflakes usrse/*.py
           pyflakes usrse/utils/fileio.py
           pyflakes usrse/utils/terminal.py
+
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup black linter
+        run: conda create --quiet --name testing pytest
+          
+      - name: Run Tests
+        run: |
+          export PATH="/usr/share/miniconda/bin:$PATH"
+          source activate testing
+          pip install -e .
+          cd usrse/tests
+          /bin/bash test_client.sh
+          pytest -xsv test_*.py

@@ -3,6 +3,7 @@ __copyright__ = "Copyright 2022, Vanessa Sochat"
 __license__ = "MPL 2.0"
 
 import usrse.defaults as defaults
+from datetime import datetime
 import sys
 
 # Registered endpoints (populated on init)
@@ -21,6 +22,10 @@ class Endpoint:
                 sys.exit(
                     "Misconfigured endpoint %s missing %s attribute" % (self, attr)
                 )
+
+    # If needed, make sure endpoint data is sorted
+    def order(self, data):
+        return data
 
     @property
     def url(self):
@@ -52,6 +57,28 @@ class Dei(Endpoint):
     emoji = "sparkles"
 
 
+class Jobs(Endpoint):
+    name = "jobs"
+    path = "/api/jobs.json"
+    emoji = "briefcase"
+
+
+class MemberCounts(Endpoint):
+    name = "member-counts"
+    path = "/api/member-counts.json"
+    emoji = "1234"
+
+    def order(self, data):
+        """
+        Sort by month and year
+        """
+        return sorted(
+            data,
+            key=lambda entry: datetime.strptime(entry["date"], "%B %Y"),
+            reverse=True,
+        )
+
+
 class Newsletters(Endpoint):
     name = "newsletters"
     path = "/api/newsletters.json"
@@ -72,6 +99,8 @@ class Events(Endpoint):
     skips = ["repeated", "published", "description"]
 
 
-for endpoint in [Dei, Newsletters, Posts, Events]:
+for endpoint in [Dei, Newsletters, Posts, Events, Jobs, MemberCounts]:
     register_names.append(endpoint.name)
     register[endpoint.name] = endpoint
+
+register_names.sort()
